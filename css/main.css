@@ -1,0 +1,63 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 93vh;
+    align-items: center;
+    background: #222;
+    color: #eee;
+    font-family: "Dosis", sans-serif;
+}
+
+.header1 {
+    margin-bottom: 1px;
+    border: 1px solid aqua;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.life {
+    margin-top: 20px;
+}
+
+.game-board,
+.timer {
+    margin: 20px;
+}
+
+
+/* 
+.game-board {
+    margin: 20px;
+} */
+
+.board {
+    /* width: 200px;
+    height: 200px; */
+    background-color: #222;
+    text-align: center;
+    border: aqua solid 1px;
+}
+
+table {
+    table-layout: fixed;
+}
+
+.cell {
+    background-color: rgb(100, 100, 100);
+    border: rgb(0, 158, 158) solid 1px;
+    width: 40px;
+    height: 40px;
+    display: table-cell;
+    vertical-align: inherit;
+    text-align: inherit;
+    padding: 1px;
+}
+
+.cell:hover {
+    background-color: rgb(197, 193, 193);
+    cursor: pointer;
+}
