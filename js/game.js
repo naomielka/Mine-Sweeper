@@ -242,7 +242,7 @@ function cellClicked(cellI, cellJ) {
     renderBoard(gBoard);
 }
 
-function startGame(elFirstCell, i, j) {
+function startGame(i, j) {
     gGame.isOn = true
     startTimer()
     renderBoard(gBoard);
