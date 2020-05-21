@@ -81,6 +81,13 @@ function manualMinesOn() {
 function getMinesManually(cellI, cellJ) {
     gBoard[cellI][cellJ].isMine = true
     gManuallyMinesCount--
+    var elMessage = document.querySelector('.alerts')
+    elMessage.style.display = 'block'
+    elMessage.innerText = `You have ${gManuallyMinesCount} mines left to place`
+    gAlertTimeout = setTimeout(function() {
+        elMessage.style.display = 'none'
+    }, 2000)
+
 }
 
 
