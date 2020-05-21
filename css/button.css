@@ -37,9 +37,11 @@
 }
 
 .brk-btn:hover:before {
+    cursor: pointer;
     right: 80%;
 }
 
 .brk-btn:hover:after {
+    cursor: pointer;
     left: 80%;
 }

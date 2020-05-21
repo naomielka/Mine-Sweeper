@@ -14,19 +14,38 @@ function setMinesNegsCount(cellI, cellJ, board) {
 }
 
 function revealNegs(cellI, cellJ, board) {
+    var shownNges = []
     for (var i = cellI - 1; i <= cellI + 1; i++) {
         if (i < 0 || i >= board.length) continue;
         for (var j = cellJ - 1; j <= cellJ + 1; j++) {
             if (j < 0 || j >= board[i].length) continue;
             if (i === cellI && j === cellJ) continue;
+            if (board[i][j].isShown) {
+                shownNges.push(board[i][j]);
+            }
             board[i][j].isShown = true
+                // if (board[i][j].minesAroundCount === 0) {
+                //     // console.log(board[i][j])
+                //     // revealNegs(i, j, board)
+                // }
         }
     }
+    return shownNges;
+}
 
+function hideNegs(cellI, cellJ, board) {
+    for (var i = cellI - 1; i <= cellI + 1; i++) {
+        if (i < 0 || i >= board.length) continue;
+        for (var j = cellJ - 1; j <= cellJ + 1; j++) {
+            if (j < 0 || j >= board[i].length) continue;
+            if (i === cellI && j === cellJ) continue;
+            board[i][j].isShown = false
+        }
+    }
 }
 
 function renderCell(location, value) {
-    var elCell = document.querySelector(`#cell${location.i}-${location.j}`);
+    var elCell = document.querySelector(`#${location.i}-${location.j}`);
     elCell.innerHTML = value;
 }
 

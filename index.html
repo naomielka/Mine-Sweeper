@@ -15,20 +15,40 @@
     <div class="header">
         <h1 class="header1">Mine Sweeper</h1>
     </div>
-    <div class="life">
-
+    <div class="lives">
+        <div class="life"></div>
     </div>
-    <div class="timer">00000</div>
-    <div class="buttons">
+    <div class="emoji" onclick="restart()"></div>
+    <div class="alert1">
+        <span class="alerts"></span>
+    </div>
+    <!-- <div class="timer" id="result"></div> -->
+    <div class="timer" id="current-time">0.000</div>
+    <div class="extra-buttons">
+        <button class="brk-btn extra-button" onclick="safeClick()" style="padding: 3px;
+         color: aquamarine; border: 0.2em solid aquamarine">safe click</button>
+        <button class="brk-btn extra-button" onclick="manualMinesOn()" style="padding: 3px;
+         color: aquamarine; border: 0.2em solid aquamarine">manual mines</button>
+        <button id="hint1" class="brk-btn extra-button" onclick="getHint(this)" style="padding: 3px;
+         color: aquamarine; border: 0.2em solid aquamarine">HINT</button>
+        <button id="hint2" class="brk-btn extra-button" onclick="getHint(this)" style="padding: 3px;
+         color: aquamarine; border: 0.2em solid aquamarine">HINT</button>
+        <button id="hint3" class="brk-btn extra-button" onclick="getHint(this)" style="padding: 3px;
+         color: aquamarine; border: 0.2em solid aquamarine">HINT</button>
+    </div>
+    <div class="level-buttons">
         <button class="brk-btn" onclick="getLevel('beginner')">Beginner</button>
         <button class="brk-btn" onclick="getLevel('medium')">medium</button>
         <button class="brk-btn" onclick="getLevel('expert') ">Expert</button>
     </div>
-    <div class="game-board"> </div>
+    <div class=game>
+        <div class="game-board"> </div>
+    </div>
+
 
     <script src="js/utils.js "></script>
+    <script src="js/extras.js "></script>
     <script src="js/game.js "></script>
-    <!-- <script src="js/mines.js "></script> -->
 </body>
 
 </html>

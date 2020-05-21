@@ -25,21 +25,13 @@ body {
 
 .game-board,
 .timer {
-    margin: 20px;
+    margin: 10px;
 }
 
-
-/* 
-.game-board {
-    margin: 20px;
-} */
-
 .board {
-    /* width: 200px;
-    height: 200px; */
     background-color: #222;
     text-align: center;
-    border: aqua solid 1px;
+    border: aquamarine solid 1px;
 }
 
 table {
@@ -60,4 +52,35 @@ table {
 .cell:hover {
     background-color: rgb(197, 193, 193);
     cursor: pointer;
+    color: rgb(100, 100, 100);
+}
+
+.alerts {
+    z-index: 9;
+    margin: 20px;
+}
+
+.emoji {
+    margin-top: 10px;
+}
+
+.emoji:hover {
+    cursor: pointer;
+}
+
+.alert1 {
+    height: 30px;
+}
+
+.alerts {
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(121, 121, 121);
+    opacity: 50%;
+    margin: 10px;
+    display: none;
+}
+
+.extra-buttons {
+    margin-bottom: 10px;
 }
